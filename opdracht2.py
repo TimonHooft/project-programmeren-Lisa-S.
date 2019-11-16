@@ -5,19 +5,23 @@ Created on Thu Nov 14 11:26:35 2019
 @author: schoc
 """
 
-def codeer _t_seq(gemeten_temperaturen): 
-    gemeten_temperaturen= ""
+def codeer_T_seq(temp): 
+    sequentie= ""
+    n = 0 
     
-for i in gemeten_temperaturen:
+    for n in temp:
+        if 0 <= float(n) <= 79 :
+            getal = float(n) / 10 
+            getal = int(getal)
+            getal = str(getal)
+            sequentie = sequentie + getal 
     
-    
-    
-    
+    for i in sequentie: 
+        i = int(i)
+        binair = '{0:03b}'.format(i)
+        print(binair, end="")
+        
+    return binair 
 
-    
-    
-
-    
-    
-#instructies 
-
+temp= [12.1, 43.5, 61.9]
+temperatuur = codeer_T_seq(temp)
