@@ -15,11 +15,9 @@ for getal in sequentie :
 #print(lijst_sequentie)
     
 aantal_stijgingen = 0
-for i in range(len(lijst_sequentie)): 
-    if lijst_sequentie[i] > lijst_sequentie[i-1]:
+for i in range(len(lijst_sequentie) - 1): 
+    if lijst_sequentie[i + 1] > lijst_sequentie[i]:
          aantal_stijgingen = aantal_stijgingen + 1
 
 print("sequentie: ", sequentie)
 print("telt", aantal_stijgingen, "stijgingen")
-
-#Het klopt niet altijd, telt soms een waarde te veel 
